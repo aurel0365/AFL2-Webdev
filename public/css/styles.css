@@ -1,0 +1,250 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding-left: 230px;
+    background-color: #f8f9fa;
+    color: #343a40;
+    display: flex;
+}
+/* Efek Fade-in dan Fade-out */
+.fade-up {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+
+section {
+    position: relative;
+    padding: 5rem 0;
+}
+
+.bg-text {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.05);
+    z-index: -1;
+    pointer-events: none;
+}
+
+h1, h2, h3 {
+    color: #212529;
+}
+
+/* Navbar */
+#header-nav {
+    position: fixed; /* Navbar tetap di kiri */
+    top: 0;
+    left: 0;
+    width: 240px; /* Lebar navbar */
+    height: 100vh; /* Sepanjang layar */
+    border-right: 1px solid #ddd; /* Garis pemisah */
+    background-color: #fff; /* Warna latar navbar */
+    z-index: 1000; /* Navbar selalu di atas */
+    overflow-y: auto; /* Scroll jika konten navbar panjang */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Konten utama */
+.main-content {
+    margin-left: 240px; /* Geser ke kanan sesuai lebar navbar */
+    padding: 20px; /* Spasi dalam konten */
+    min-height: 100vh; /* Pastikan konten memenuhi layar */
+    overflow-x: hidden; /* Hilangkan scroll horizontal */
+    flex: 1;
+    position: relative; /* Pastikan konten tidak berada di bawah navbar */
+    z-index: 1; /* Konten di atas layer background */
+}
+
+/* Link navigasi */
+.nav-link {
+    color: #333; /* Warna teks default */
+    text-decoration: none; /* Hilangkan garis bawah */
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #42C8DC; /* Warna saat hover */
+}
+
+/* Menu vertikal */
+.vertical-menu .menu-item {
+    margin-bottom: 15px; /* Spasi antar menu */
+}
+
+.vertical-menu .menu-item:last-child {
+    margin-bottom: 0; /* Hilangkan margin bawah untuk item terakhir */
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    #header-nav {
+        width: 100%; /* Navbar menjadi penuh di layar kecil */
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .main-content {
+        margin-left: 0; /* Konten kembali memenuhi layar */
+    }
+}
+
+/* Banner Section */
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.banner-title {
+    font-size: 130px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #141414;
+}
+
+.banner-content span {
+    font-size: 80%;
+    font-weight: bold;
+    color: #868e96;
+    text-transform: uppercase;
+}
+
+.row  {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #5a54d6;
+}
+
+/* About Section */
+.data-info {
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #6c63ff;
+    padding-left: 1rem;
+}
+
+.meta-date {
+    font-size: 1rem;
+    color: #868e96;
+}
+
+.info-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+/* Skill Chart */
+.skill-chart-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-item {
+    margin-bottom: 1.5rem;
+}
+
+.skill-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.percentage {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.progress-bar {
+    position: relative;
+    height: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #ff5a5f;
+    border-radius: 5px 0 0 5px;
+}
+
+.ninety-percent {
+    width: 90%;
+}
+
+.seventy-five-percent {
+    width: 75%;
+}
+
+.eighty-percent {
+    width: 80%;
+}
+
+.seventy-percent {
+    width: 70%;
+}
+
+.ninety-five-percent {
+    width: 95%;
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+section {
+    background-color: #f8f9fa;
+    padding: 3rem 1rem;
+}
+
+
+@media (min-width: 992px) {
+    .col-lg-3 {
+        flex: 0 0 auto;
+        width: 40%;
+    }
+}
